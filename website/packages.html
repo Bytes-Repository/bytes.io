@@ -1,58 +1,255 @@
+<!-- /website/packages.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bytes.io - Packages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { text-align: center; padding: 20px; background-color: #f8f8f8; }
-        nav { background-color: #333; color: white; padding: 10px; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
-        main { padding: 20px; }
-        footer { text-align: center; padding: 20px; background-color: #f8f8f8; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; padding: 10px; border: 1px solid #ddd; background-color: #f9f9f9; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a192f;
+            color: #ccd6f6;
+            overflow-x: hidden;
+            position: relative;
+        }
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .particle {
+            position: absolute;
+            background: rgba(100, 255, 218, 0.2);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(10vw); opacity: 0.5; }
+        }
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0a192f, #112240);
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 10px 0;
+            color: #64ffda;
+            animation: slideInLeft 1s ease-out;
+        }
+        header p {
+            font-size: 1.3em;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #8892b0;
+            animation: fadeIn 1.5s ease-out;
+        }
+        nav {
+            background: rgba(10, 25, 47, 0.9);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav li {
+            display: inline-block;
+            margin: 0 25px;
+        }
+        nav a {
+            color: #64ffda;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2em;
+            position: relative;
+            transition: color 0.3s;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #64ffda;
+            transition: width 0.3s;
+        }
+        nav a:hover {
+            color: #ccd6f6;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        main {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            color: #64ffda;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .section h2::before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: #64ffda;
+            bottom: -10px;
+            left: 0;
+        }
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .package-card {
+            background: rgba(17, 34, 64, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1.2s ease-out;
+        }
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(100, 255, 218, 0.2);
+        }
+        .package-card h3 {
+            font-size: 1.8em;
+            color: #ccd6f6;
+            margin-bottom: 15px;
+        }
+        .package-card p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #8892b0;
+        }
+        .package-card a {
+            display: inline-block;
+            background: linear-gradient(135deg, #64ffda, #0bc9bb);
+            color: #0a192f;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .package-card a:hover {
+            background: linear-gradient(135deg, #0bc9bb, #64ffda);
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #112240, #0a192f);
+            color: #8892b0;
+        }
+        footer p {
+            font-size: 1.2em;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideInLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5em; }
+            nav li { margin: 0 15px; }
+            .packages-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
+    <div id="particles"></div>
     <header>
         <h1>Bytes.io Packages</h1>
-        <p>Browse our list of repositories for libraries supporting Hacker Lang and Vira Lang.</p>
+        <p>Browse our curated list of repositories for libraries supporting Hacker Lang and Vira Lang. Find the perfect tools to enhance your programming projects.</p>
     </header>
     <nav>
-        <a href="home.html">Home</a>
-        <a href="packages.html">Packages</a>
-        <a href="contributors.html">Contributors</a>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="contributors.html">Contributors</a></li>
+        </ul>
     </nav>
     <main>
-        <h2>Available Packages</h2>
-        <ul>
-            <li>
-                <strong>Hacker Lang Utils</strong><br>
-                A collection of utility functions for simple scripting in Hacker Lang.<br>
-                <a href="https://github.com/bytesio/hacker-lang-utils">View Repository</a>
-            </li>
-            <li>
-                <strong>Vira Lang Core Lib</strong><br>
-                Advanced core library for Vira Lang, including data structures and algorithms.<br>
-                <a href="https://github.com/bytesio/vira-lang-core">View Repository</a>
-            </li>
-            <li>
-                <strong>Hacker Lang Web Framework</strong><br>
-                Basic web development tools for Hacker Lang.<br>
-                <a href="https://github.com/bytesio/hacker-lang-web">View Repository</a>
-            </li>
-            <li>
-                <strong>Vira Lang AI Modules</strong><br>
-                Modules for AI and machine learning integration in Vira Lang.<br>
-                <a href="https://github.com/bytesio/vira-lang-ai">View Repository</a>
-            </li>
-            <!-- Add more packages as needed -->
-        </ul>
+        <section class="section">
+            <h2>Available Packages</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h3>Hacker Lang Utils</h3>
+                    <p>A collection of utility functions for simple scripting in Hacker Lang, including string manipulation, file handling, and basic algorithms.</p>
+                    <a href="https://github.com/bytesio/hacker-lang-utils">View Repository</a>
+                </div>
+                <div class="package-card">
+                    <h3>Vira Lang Core Lib</h3>
+                    <p>Advanced core library for Vira Lang, featuring efficient data structures, algorithms, and concurrency support.</p>
+                    <a href="https://github.com/bytesio/vira-lang-core">View Repository</a>
+                </div>
+                <div class="package-card">
+                    <h3>Hacker Lang Web Framework</h3>
+                    <p>Basic web development tools for Hacker Lang, enabling quick setup of servers and handling HTTP requests.</p>
+                    <a href="https://github.com/bytesio/hacker-lang-web">View Repository</a>
+                </div>
+                <div class="package-card">
+                    <h3>Vira Lang AI Modules</h3>
+                    <p>Modules for AI and machine learning integration in Vira Lang, with support for neural networks and data processing.</p>
+                    <a href="https://github.com/bytesio/vira-lang-ai">View Repository</a>
+                </div>
+                <!-- Add more packages as needed -->
+            </div>
+        </section>
     </main>
     <footer>
-        <p>Bytes.io - Repository for Hacker Lang and Vira Lang Libraries</p>
+        <p>Bytes.io - Your Central Repository for Hacker Lang and Vira Lang Libraries</p>
     </footer>
+    <script>
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                const size = Math.random() * 5 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.top = `${Math.random() * 100}vh`;
+                particle.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                particlesContainer.appendChild(particle);
+            }
+        }
+        createParticles();
+    </script>
 </body>
 </html>
