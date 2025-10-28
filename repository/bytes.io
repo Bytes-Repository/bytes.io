@@ -1,6 +1,8 @@
 = Hacker Lang [
 obsidian => https://github.com/Bytes-Repository/obsidian-lib.git
+
 ]
 = Vira [
-crypto => 
+crypto => https://github.com/Bytes-Repository/crypto-lib.git
+
 ]
