@@ -3,5 +3,7 @@ obsidian => https://github.com/Bytes-Repository/obsidian-lib/releases/download/v
 vibrant =>
 crypto =>
 containerized =>
+net-lib =>
+hacked =>
 
 ]
