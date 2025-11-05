@@ -4,7 +4,7 @@
   pillar =>
  ]
  = CLI [
-  vibrant =>
+  yuy =>
  ]
 crypto =>
 containerized =>
