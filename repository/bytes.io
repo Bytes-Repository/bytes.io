@@ -4,7 +4,7 @@
   pillar =>
  ]
  = CLI [
-  yuy =>
+  yuy => https://github.com/Bytes-Repository/yuy-lib/releases/download/v0.1/yuy-lib
  ]
 crypto =>
 containerized =>
