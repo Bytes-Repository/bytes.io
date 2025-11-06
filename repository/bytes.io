@@ -1,4 +1,4 @@
-= Hacker Lang [
+= Public [
  = GUI [
   obsidian => https://github.com/Bytes-Repository/obsidian-lib/releases/download/v0.1/obsidian-lib
   pillar =>
@@ -10,5 +10,13 @@ crypto =>
 containerized =>
 net-lib =>
 hacked =>
+]
 
+= Community [
+ = GUI [
+  REPO => LINK
+ ]
+ = CLI [
+
+ ]
 ]
