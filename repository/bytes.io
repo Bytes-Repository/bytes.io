@@ -8,7 +8,7 @@ Public:
   containerized: null
   net-lib: null
   hacked: null
-  not-scripting: https://github.com/Bytes-Repository/not-scripting/releases/download/v0.1/not-scripting
+  not-scripting: "https://github.com/Bytes-Repository/not-scripting/releases/download/v0.1/not-scripting"
 
 Community:
   GUI:
