@@ -4,4 +4,4 @@
 
 *.hacker linguist-detectable=true
 *.hacker linguist-documentation=false
-*.hacker linguist-language=Hacker
+*.hacker linguist-language=YAML
