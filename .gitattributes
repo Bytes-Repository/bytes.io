@@ -1,3 +1,7 @@
 *.yaml linguist-documentation=false
 *.yaml linguist-detectable=true
 *.yaml linguist-language=YAML
+
+*.io linguist-documentation=false
+*.io linguist-detectable=true
+*.io linguist-language=YAML
