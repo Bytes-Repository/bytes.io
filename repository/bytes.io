@@ -5,6 +5,6 @@ Public:
   translator: ""
   json: "https://github.com/Bytes-Repository/json/releases/download/v0.1/json"
   yaml: "https://github.com/Bytes-Repository/yaml/releases/download/v0.1/yaml"
-  toml: ""
+  toml: "https://github.com/Bytes-Repository/toml/releases/download/v0.1/toml"
 
 Community:
