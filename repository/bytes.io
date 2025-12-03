@@ -6,5 +6,7 @@ Public:
   json: "https://github.com/Bytes-Repository/json/releases/download/v0.1/json"
   yaml: "https://github.com/Bytes-Repository/yaml/releases/download/v0.1/yaml"
   toml: "https://github.com/Bytes-Repository/toml/releases/download/v0.1/toml"
+  crunch: ""
+  hexen: ""
 
 Community:
