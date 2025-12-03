@@ -4,7 +4,7 @@ Public:
   not-scripting: "https://github.com/Bytes-Repository/not-scripting/releases/download/v0.1/not-scripting"
   translator: ""
   json: "https://github.com/Bytes-Repository/json/releases/download/v0.1/json"
-  yaml: ""
+  yaml: "https://github.com/Bytes-Repository/yaml/releases/download/v0.1/yaml"
   toml: ""
 
 Community:
