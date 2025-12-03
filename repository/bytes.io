@@ -3,7 +3,7 @@ Public:
   yuy: "https://github.com/Bytes-Repository/yuy-lib/releases/download/v0.1/yuy-lib"
   not-scripting: "https://github.com/Bytes-Repository/not-scripting/releases/download/v0.1/not-scripting"
   translator: ""
-  json: ""
+  json: "https://github.com/Bytes-Repository/json/releases/download/v0.1/json"
   yaml: ""
   toml: ""
 
