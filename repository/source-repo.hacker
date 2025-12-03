@@ -1,6 +1,7 @@
 Public:
   pillar: "https://github.com/Bytes-Repository/pillar-lib.git"
   containerized: "https://github.com/Bytes-Repository/containerized-lib.git"
+  crypto: ""
 
 Community:
   
