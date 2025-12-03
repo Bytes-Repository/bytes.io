@@ -8,5 +8,6 @@ Public:
   toml: "https://github.com/Bytes-Repository/toml/releases/download/v0.1/toml"
   crunch: ""
   hexen: ""
+  ares: ""
 
 Community:
