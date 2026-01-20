@@ -9,5 +9,6 @@ Public:
   bi: ""
   rust-gtk4: ""
   python-qt6: ""
+  hk-parser: ""
 
 Community:
