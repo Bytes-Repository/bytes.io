@@ -1,0 +1,6 @@
+! Konfiguracja narzędzi dla HackerOS
+[public]
+-> hacker-editor => https://github.com/Bytes-Repository/Hacker-Editor/releases/download/v0.1/Hacker-Editor.AppImage
+
+[community]
+! Tutaj możesz dodać edytory stworzone przez społeczność
